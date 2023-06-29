@@ -28,9 +28,15 @@ The following data structures were used in this project:
 ### Controller
 The controller is responsible for handling incoming requests and returning appropriate responses. In the code, it have a UserController which handles requests related to the user entity. It has methods such as createUser, getUser, getAllUsers, updateUser, and deleteUser. These methods use the UserService to perform CRUD (create, read, update, delete) operations on the user data.
 
+### Service
+The service layer contains the business logic of the project. It acts as an intermediary between the controller and the repository. In the code, it have a RestaurantService which contains methods such as getRestaurantById, getAllRestaurants, addRestaurant, updateRestaurantInfo, and removeRestaurantr. These methods perform validation on the input data and delegate datasource operations to the RestaurantRepository.
+
+### Repository
+In the code, it have a RestaurantRepository.This interface provides basic CRUD operations such as add, delete, update etc.
+
 
 ### Entity
-In the code, i have created a module named User which contains the User entity class. This class represents the data model of the user and contains properties such as id, name, username, address, and phoneNumber.
+In the code, I have created a module named User which contains the User entity class. This class represents the data model of the user and contains properties such as id, dob, username, email, and phoneNumber etc. with validations.
 
 Overall, these components work together to create a layered architecture for your project, which separates concerns and promotes modularity and maintainability.
 
